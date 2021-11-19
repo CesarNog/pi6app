@@ -17,7 +17,11 @@ import br.com.univesp.diretoducampo.item.OnBoardingItem;
 public class OnBoardingAdapter extends RecyclerView.Adapter<OnBoardingAdapter.OnboardingViewHolder>{
 
 
+<<<<<<< HEAD
+    private List<OnBoardingItem> onBoardingItems;
+=======
     private final List<OnBoardingItem> onBoardingItems;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 
     public OnBoardingAdapter(List<OnBoardingItem> onBoardingItems) {
         this.onBoardingItems = onBoardingItems;
@@ -45,9 +49,15 @@ public class OnBoardingAdapter extends RecyclerView.Adapter<OnBoardingAdapter.On
 
     class OnboardingViewHolder extends RecyclerView.ViewHolder {
 
+<<<<<<< HEAD
+        private TextView textTitle;
+        private TextView textDescription;
+        private ImageView imageOnboarding;
+=======
         private final TextView textTitle;
         private final TextView textDescription;
         private final ImageView imageOnboarding;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 
         OnboardingViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -9,10 +9,15 @@ import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
+<<<<<<< HEAD
+import android.view.LayoutInflater;
+import android.view.View;
+=======
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,7 +37,10 @@ abstract public class NewProductForm {
     private final ListenerConfirm listener;
     private final Context context;
     private Product product;
+<<<<<<< HEAD
+=======
     private AlertDialog editList = null;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 
     NewProductForm(Context context,
                             String title,
@@ -58,18 +66,28 @@ abstract public class NewProductForm {
 
         if (productName.contains("bacaxi")) {
             foundDrawable = ctx.getDrawable(R.drawable.abacaxi);
+<<<<<<< HEAD
+        } else if (productName.contains("cerola")) {
+            foundDrawable = ctx.getDrawable(R.drawable.acerola);
+=======
         } else if (productName.contains("enoura")) {
             foundDrawable = ctx.getDrawable(R.drawable.cenoura);
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
         } else if (productName.contains("cula")) {
             foundDrawable = ctx.getDrawable(R.drawable.rucula);
         } else if (productName.contains("açã")) {
             foundDrawable = ctx.getDrawable(R.drawable.maca);
         } else if (productName.contains("elão")) {
             foundDrawable = ctx.getDrawable(R.drawable.melao);
+<<<<<<< HEAD
+        } else {
+            foundDrawable = ctx.getDrawable(R.drawable.logo);
+=======
         }  else if (productName.contains("cerol")) {
             foundDrawable = ctx.getDrawable(R.drawable.acerola);
         }  else {
             foundDrawable = ctx.getDrawable(R.drawable.sem_imagem);
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
         }
 
         return foundDrawable;
@@ -79,7 +97,11 @@ abstract public class NewProductForm {
         @SuppressLint("InflateParams") View viewCriada = LayoutInflater.from(context)
                 .inflate(R.layout.product_form_dialog, null);
         tentaPreencherFormulario(viewCriada);
+<<<<<<< HEAD
+        new AlertDialog.Builder(context)
+=======
         AlertDialog editList = new AlertDialog.Builder(context)
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
                 .setTitle(title)
                 .setView(viewCriada)
                 .setPositiveButton(titlePositiveButton, (dialog, which) -> {
@@ -116,6 +138,8 @@ abstract public class NewProductForm {
             campoVendedor.setText(product.getSeller());
             EditText campoVendedorTelefone = getEditText(viewCriada, R.id.formulario_produto_seller_phone);
             campoVendedorTelefone.setText(product.getSellerPhone());
+<<<<<<< HEAD
+=======
             campoVendedorTelefone.setOnKeyListener(new View.OnKeyListener() {
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
                     // If the event is a key-down event on the "enter" button
@@ -131,6 +155,7 @@ abstract public class NewProductForm {
                     return false;
                 }
             });
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 
             ImageView campoProductImage = getImageView(viewCriada, R.id.formulario_produto_imagem);
             campoProductImage.setImageDrawable(getImageProduct(viewCriada.getContext(),campoNome.getText().toString()));

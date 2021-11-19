@@ -18,7 +18,10 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+<<<<<<< HEAD
+=======
 import androidx.annotation.NonNull;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.core.app.ActivityCompat;
@@ -42,6 +45,15 @@ public class ListProductsActivity extends AppCompatActivity {
     private ProductsListAdapter adapter;
     private ProductRepository repository;
 
+<<<<<<< HEAD
+    // One Button
+    Button BSelectImage;
+
+    // One Preview Image
+    ImageView IVPreviewImage;
+
+=======
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +78,9 @@ public class ListProductsActivity extends AppCompatActivity {
         findProducts();
     }
 
+<<<<<<< HEAD
+    private void findProducts() {
+=======
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -85,6 +100,7 @@ public class ListProductsActivity extends AppCompatActivity {
     }
 
     public void findProducts() {
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
         repository.findProducts(new ProductRepository.ProductsCallback<List<Product>>() {
             @Override
             public void success(List<Product> products) {
@@ -93,7 +109,11 @@ public class ListProductsActivity extends AppCompatActivity {
 
             @Override
             public void fail(String error) {
+<<<<<<< HEAD
+                Toast.makeText(ListProductsActivity.this, "Não foi possível atualizar a lista de produtos. \n Erro: " + error, Toast.LENGTH_LONG).show();
+=======
                 //Toast.makeText(ListProductsActivity.this, "Não foi possível atualizar a lista de produtos. \n Erro: " + error, Toast.LENGTH_LONG).show();
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
                 Log.e(this.getClass().getName(), error);
             }
         });
@@ -112,7 +132,11 @@ public class ListProductsActivity extends AppCompatActivity {
 
                     @Override
                     public void fail(String error) {
+<<<<<<< HEAD
+                        Toast.makeText(ListProductsActivity.this, "Não foi possível carregar a lista de produtos no momento. \n Por favor tente mais tarde!", Toast.LENGTH_LONG).show();
+=======
                         //Toast.makeText(ListProductsActivity.this, "Não foi possível carregar a lista de produtos no momento. \n Por favor tente mais tarde!", Toast.LENGTH_LONG).show();
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
                         Log.e(ListProductsActivity.this.toString(), error);
                     }
                 })));
@@ -153,14 +177,22 @@ public class ListProductsActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
+    private ActivityResultLauncher<String> requestPermissionLauncher =
+=======
     private final ActivityResultLauncher<String> requestPermissionLauncher =
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (!isGranted) {
                     Toast.makeText(ListProductsActivity.this, "Por favor dê as permissões pedidas para continuar. Tente novamente.", Toast.LENGTH_LONG).show();
                 }
             });
 
+<<<<<<< HEAD
+    private ActivityResultLauncher<String> requestPermissionLauncherShareWhatsApp =
+=======
     private final ActivityResultLauncher<String> requestPermissionLauncherShareWhatsApp =
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
     registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
         if (!isGranted) {
             Toast.makeText(ListProductsActivity.this, "Por favor dê as permissões pedidas para continuar. Tente novamente.", Toast.LENGTH_LONG).show();

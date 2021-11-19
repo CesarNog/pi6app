@@ -44,7 +44,10 @@ import com.google.i18n.phonenumbers.Phonenumber;
 
 import br.com.univesp.diretoducampo.R;
 import br.com.univesp.diretoducampo.model.Product;
+<<<<<<< HEAD
+=======
 import br.com.univesp.diretoducampo.ui.activity.ListProductsActivity;
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
 
 public class ProductsListAdapter extends
         RecyclerView.Adapter<ProductsListAdapter.ViewHolder> {
@@ -97,27 +100,37 @@ public class ProductsListAdapter extends
         int tamanhoNovo = this.products.size();
         notifyItemRangeInserted(tamanhoAtual, tamanhoNovo);
         Toast.makeText(context, "Produto adicionado com sucesso!", Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
+=======
         if (context instanceof ListProductsActivity) {
             ((ListProductsActivity) context).findProducts();
         }
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
     }
 
     public void edita(int posicao, Product product) {
         products.set(posicao, product);
         notifyItemChanged(posicao);
+<<<<<<< HEAD
+        Toast.makeText(context, "Produto " + product.getProduct() + " editado com sucesso!", Toast.LENGTH_LONG).show();
+=======
         Toast.makeText(context, "O produto '" + product.getProduct() + "' foi editado com sucesso!", Toast.LENGTH_LONG).show();
         if (context instanceof ListProductsActivity) {
             ((ListProductsActivity) context).findProducts();
         }
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
     }
 
     public void remove(int posicao, Product removedProduct) {
         products.remove(posicao);
         notifyItemRemoved(posicao);
         Toast.makeText(context, "Produto " + removedProduct.getProduct() + " foi removido com sucesso!", Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
+=======
         if (context instanceof ListProductsActivity) {
             ((ListProductsActivity) context).findProducts();
         }
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -230,18 +243,28 @@ public class ProductsListAdapter extends
 
             if (productName.contains("bacaxi")) {
                 foundDrawable = ctx.getDrawable(R.drawable.abacaxi);
+<<<<<<< HEAD
+            } else if (productName.contains("cerola")) {
+                foundDrawable = ctx.getDrawable(R.drawable.acerola);
+=======
             } else if (productName.contains("enoura")) {
                 foundDrawable = ctx.getDrawable(R.drawable.cenoura);
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
             } else if (productName.contains("cula")) {
                 foundDrawable = ctx.getDrawable(R.drawable.rucula);
             } else if (productName.contains("açã")) {
                 foundDrawable = ctx.getDrawable(R.drawable.maca);
             } else if (productName.contains("elão")) {
                 foundDrawable = ctx.getDrawable(R.drawable.melao);
+<<<<<<< HEAD
+            } else {
+                foundDrawable = ctx.getDrawable(R.drawable.logo);
+=======
             }  else if (productName.contains("cerol")) {
                 foundDrawable = ctx.getDrawable(R.drawable.acerola);
             }  else {
                 foundDrawable = ctx.getDrawable(R.drawable.sem_imagem);
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
             }
 
             return foundDrawable;

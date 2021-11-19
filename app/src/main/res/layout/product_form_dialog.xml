@@ -139,12 +139,21 @@
 
     <ImageView
         android:id="@+id/formulario_produto_imagem"
+<<<<<<< HEAD
+        android:layout_width="276dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/select_image_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+=======
         android:layout_width="191dp"
         android:layout_height="107dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/select_image_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
+>>>>>>> 32c20913177a35967715ed59445a629d0d1f81db
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formulario_produto_seller_phone" />
 
